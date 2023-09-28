@@ -14,6 +14,11 @@ public class Battleship
     {
         int xPos;
         int yPos;
+        System.out.println("Enter the row you want to place your ship(1-10): ");
+        xPos = ship.nextInt() - 1;
+        System.out.println("Enter the column you want to place your ship(1-10): ");
+        yPos = ship.nextInt() - 1;
+
     }
     
     public void printBoard()
