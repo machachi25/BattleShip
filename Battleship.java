@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Battleship
 {
     int numRows = 10;
