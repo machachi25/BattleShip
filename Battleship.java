@@ -14,10 +14,21 @@ public class Battleship
     {
         int xPos;
         int yPos;
-        System.out.println("Enter the row you want to place your destroyer (1-10): ");
-        xPos = ship.nextInt() - 1;
-        System.out.println("Enter the column you want to place your ship(1-10): ");
-        yPos = ship.nextInt() - 1;
+        int direction;
+        System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
+        do
+        {
+        System.out.println("What direction would you like your destroyer to face? ");
+        direction = ship.nextInt();
+        }
+        while(direction <=1 || direction >= 4);
+
+        if(direction == 1 || direction == 3)
+        {
+            
+        }
+
+        
 
     }
     
