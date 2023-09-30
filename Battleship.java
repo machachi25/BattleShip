@@ -27,17 +27,25 @@ public class Battleship
         xPos = ship.nextInt();
         System.out.println("What column would you like to place your ship? ");
         yPos = ship.nextInt();
-        do
-        {        
-        System.out.println("What direction would you like your destroyer to face? ");
-        direction = ship.nextInt();
-        }
-        while(direction <=1 || direction >= 4);
 
-        if(direction == 1)
-        {
+      public void Setdirection(String shipName) {        
+            do
+            {
+                System.out.println("What direction would you like your" + shipName +  "to go in? ");
+                System.out.println(" 1 is up, 2 is down, 3 is left, 4 is right");
+                direction = ship.nextInt();
+            }
+            while (direction < 1 || direction > 4);
+            if(direction == 1)
+            {
+                if(xPos + Destroyer >= numRows)
+                {
+                    System.out.println("\n Sorry, but that is not on the board \n");
+                    Setdirection(shipName);
+                }
+            }
+        }                
 
-        }
 
         
 
