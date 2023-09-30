@@ -15,6 +15,12 @@ public class Battleship
         int xPos;
         int yPos;
         int direction;
+        final int Destroyer = 2;
+        final int carrier = 5;
+        final int cruiser = 3;
+        final int submarine = 3;
+        final int battleship = 4;
+
         System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
         do
         {
@@ -23,9 +29,9 @@ public class Battleship
         }
         while(direction <=1 || direction >= 4);
 
-        if(direction == 1 || direction == 3)
+        if(direction == 1)
         {
-            
+
         }
 
         
