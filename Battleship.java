@@ -24,7 +24,8 @@ public class Battleship
 
         System.out.println("The board is a 10 x 10 square");
         System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
-        System.out.println("What row would you like your ship to go in? ");
+        System.out.println("What ship would you like to place?");
+        System.out.println("What row would you like your  to go in? ");
         xPos = ship.nextInt();
         System.out.println("What column would you like to place your ship? ");
         yPos = ship.nextInt();
