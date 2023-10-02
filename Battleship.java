@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 
 public class Battleship
 {
@@ -8,18 +8,19 @@ public class Battleship
     int[] ships = new  int[5];
 
     int[][] game = new int[numRows][numCols];
+     int xPos;
+     int yPos;
+     int direction;
+     final int Destroyer = 2;
+     final int carrier = 5;
+     final int cruiser = 3;
+     final int submarine = 3;
+     final int battleship = 4;
 
     
     public void shipPlace()
     {
-        int xPos;
-        int yPos;
-        int direction;
-        final int Destroyer = 2;
-        final int carrier = 5;
-        final int cruiser = 3;
-        final int submarine = 3;
-        final int battleship = 4;
+        
 
         System.out.println("The board is a 10 x 10 square");
         System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
@@ -27,8 +28,9 @@ public class Battleship
         xPos = ship.nextInt();
         System.out.println("What column would you like to place your ship? ");
         yPos = ship.nextInt();
-
-      public void Setdirection(String shipName) {        
+    }
+      public void Setdirection(String shipName) 
+      {        
             do
             {
                 System.out.println("What direction would you like your" + shipName +  "to go in? ");
@@ -45,11 +47,9 @@ public class Battleship
                 }
             }
         }                
-
-
         
 
-    }
+   
     
     public void printBoard()
     {
