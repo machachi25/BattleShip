@@ -2,28 +2,29 @@
 
 public class Battleship
 {
-    Scanner ship = new Scanner(System.in);
-    int numRows = 10;
-    int numCols = 10;
-    int[] ships = new  int[5];
+    public static void main()
+    {
+         
 
-    int[][] game = new int[numRows][numCols];
-     int xPos;
-     int yPos;
-     int direction;
-     String type;
-     final int destroyer = 2;
-     final int carrier = 5;
-     final int cruiser = 3;
-     final int submarine = 3;
-     final int battleship = 4;
-
-    
+    }
     public void shipPlace()
     {
-        
+        int numRows = 10;
+        int numCols = 10;
+        int[] ships = new  int[5];
 
-        System.out.println("The board is a 10 x 10 square");
+        int[][] game = new int[numRows][numCols];
+        Scanner ship = new Scanner(System.in);
+        int xPos;
+        int yPos;
+        int direction;
+        String type;
+        final int destroyer = 2; //ship variables and declarations
+        final int carrier = 5;
+        final int cruiser = 3;
+        final int submarine = 3;
+        final int battleship = 4;
+        System.out.println("The board is a 10 x 10 square"); // "board" game instructions on how to play
         System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
         System.out.println("The ships:");
         System.out.println("Destroyer - 2 units long");
@@ -31,14 +32,15 @@ public class Battleship
         System.out.println("Submarine: 3 units long");
         System.out.println("Battleship - 4 units long");
         System.out.println("Carrier - 5 units long");
-        System.out.println("What ship would you like to place?");
+        System.out.println("What ship would you like to place?"); // user should input the type(variable) of ship they want to place first
         type = ship.nextLine();
-        System.out.println("What row would you like your " + type +  " to go in? ");
+        System.out.println("What row would you like your " + type +  " to go in? "); // user inputs the x coordinate of their ship
         xPos = ship.nextInt();
-        System.out.println("What column would you like to place your ship? ");
+        System.out.println("What column would you like to place your " + type + "?"); //user inputs the y coordinate of their ship
         yPos = ship.nextInt();
+
     }
-      public void Setdirection(String shipName) 
+     public void Setdirection(String shipName) 
       {        
             do
             {
@@ -49,26 +51,30 @@ public class Battleship
             while (direction < 1 || direction > 4);
             if(direction == 1)
             {
-                if(xPos + Destroyer >= numRows)
+                if(xPos + destroyer >= numRows)
                 {
                     System.out.println("\n Sorry, but that is not on the board \n");
                     Setdirection(shipName);
                 }
             }
-        }                
-        
-
-   
-    
+        }    
     public void printBoard()
     {
-        for(int r = 0; r < 10; r++ )
-        {
-            for (int c = 0; c < 10; c++ )
+    for(int r = 0; r < 10; r++ )
+    {
+        for (int c = 0; c < 10; c++ )
             {
                 System.out.print(game[r][c] + " ");
             }
             System.out.println("");
-        }
     }
+    }            
+    
+   
+     
+        
+
+   
+    
+    
 }
