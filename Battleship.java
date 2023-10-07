@@ -25,13 +25,13 @@ public class Battleship
 
         System.out.println("The board is a 10 x 10 square");
         System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
-        System.out.println("What ship would you like to place?");
         System.out.println("The ships:");
         System.out.println("Destroyer - 2 units long");
         System.out.println("Cruiser - 3 units long");
         System.out.println("Submarine: 3 units long");
         System.out.println("Battleship - 4 units long");
         System.out.println("Carrier - 5 units long");
+        System.out.println("What ship would you like to place?");
         type = ship.nextLine();
         System.out.println("What row would you like your " + type +  " to go in? ");
         xPos = ship.nextInt();
