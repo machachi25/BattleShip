@@ -25,7 +25,7 @@ public class Battleship
         final int submarine = 3;
         final int battleship = 4;
         System.out.println("The board is a 10 x 10 square"); // "board" game instructions on how to play
-        System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
+        System.out.println("1 is horizontal, 2 is vertical");
         System.out.println("The ships:");
         System.out.println("Destroyer - 2 units long");
         System.out.println("Cruiser - 3 units long");
@@ -42,6 +42,11 @@ public class Battleship
     }
      public void Setdirection(String shipName) 
       {        
+        int direction;
+        int xPos;
+        int destroyer;
+        int numRows;
+        Scanner ship = new Scanner(System.in);
             do
             {
                 System.out.println("What direction would you like your" + shipName +  "to go in? ");
@@ -60,6 +65,9 @@ public class Battleship
         }    
     public void printBoard()
     {
+    int numRows = 10;
+    int numColumns = 10;
+    int[][] game = new int[numRows][numColumns];
     for(int r = 0; r < 10; r++ )
     {
         for (int c = 0; c < 10; c++ )
