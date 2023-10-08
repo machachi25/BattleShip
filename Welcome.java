@@ -6,15 +6,6 @@ public class Welcome {
         System.out.println("Hello There! Welcome to battleship!");
         System.out.println("Would you rather play the fast mode or the Regular mode?");
         String Mode;
-        Mode = mode.nextLine();
-        if(Mode == "fast" || Mode == "Fast") //conditionial will lead to to file being used
-        {
-            fast.main();
-        } 
-        else if(Mode == "Regular" || Mode == "regular")
-        {
-            Battleship.main();
-        }
-    
+        
     }
 }
