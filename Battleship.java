@@ -109,6 +109,11 @@ import java.util.Random; // this is for fast mode, but going to try and get regu
     }
     }            
 
+//Things that i have made progress on: i have a very clear set of directions that are made up of print statements, 
+//my main problem is how to write out my plan in the java language, hence my do while problem
+//to make my conditional, I tried to create a main mehtod in the fast and battleship classes, but it got overcomplicated very quickly
+//Currently have tester class issue with adding set direction object
+
 
 
 
