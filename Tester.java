@@ -4,5 +4,6 @@ public class Tester {
         Battleship b1 = new Battleship();
         b1.printBoard();
         b1.shipPlace();
+        b1.setDirection();
     }
 }

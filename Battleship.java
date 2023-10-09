@@ -31,7 +31,7 @@ import java.util.Scanner;
         int numCols = 10;
         int[] ships = new  int[5];
 
-        System.out.println("The board is a 10 x 10 square");
+        //System.out.println("The board is a 10 x 10 square");
         int[][] game = new int[numRows][numCols];
         Scanner ship = new Scanner(System.in);
         int xPos;
@@ -59,7 +59,7 @@ import java.util.Scanner;
         yPos = ship.nextInt();
 
     }
-     public void Setdirection(String shipName) 
+     public void setDirection(String shipName) 
       {
         int direction;        
             do
@@ -75,7 +75,7 @@ import java.util.Scanner;
                 if(xPos + destroyer >= numRows)
                 {
                     System.out.println("\n Sorry, but that is not on the board \n");
-                    Setdirection(shipName);
+                    setDirection(shipName);
                 }
             }                
 
