@@ -58,21 +58,32 @@ import java.util.Scanner;
         System.out.println("What column would you like to place your " + type + "?"); //user inputs the y coordinate of their ship
         yPos = ship.nextInt();
 
+        /*do
+         * {
+         *  System.out.println("Enter the ship you want to place: ");
+         * type = ship.nextLine();
+         * }
+         *while(type == "Destroyer" || type == "destroyer")
+         */
+        //Was gonna repeat this do while loop for all of the ship names, hoping that when they type their ship name, it will only register for 10 "correct" names;
+        //
+
     }
-     public void setDirection(String shipName) 
+     public void setDirection(String shipName) // this class is meant to be a validator to see if their ship placement is valid
       {
         int direction;        
             do
             {
                 System.out.println("What direction would you like your" + shipName +  "to go in? ");
                 System.out.println(" 1 is up, 2 is down, 3 is left, 4 is right");
-                direction = ship.nextInt();
+                direction = ship.nextInt(); // want to use int values to register if their postiton is accpetable or not
+                // using a do while for a similar reason as my ship type do while
             }
             while(direction > 1 || direction < 4);
             if(direction == 1)
             {
-                if(xPos + destroyer >= numRows)
-                if(xPos + destroyer >= numRows)
+                if(xPos + destroyer >= numRows)// to see if the row number they put is in the grid itself
+                if(yPos + destroyer >= numColumns)// same as rows, but for columns, and for yPos
                 {
                     System.out.println("\n Sorry, but that is not on the board \n");
                     setDirection(shipName);
@@ -83,7 +94,7 @@ import java.util.Scanner;
 
 
         }    
-    public void printBoard()
+    public void printBoard() // class is to print out a board, i think we did this in class
     {
             
     for(int r = 0; r < 10; r++ )
