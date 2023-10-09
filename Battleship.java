@@ -1,14 +1,15 @@
 import java.util.Scanner;
+import java.util.Random; // this is for fast mode, but going to try and get regualr working first
  
  public class Battleship
 {
 
-    Scanner ship = new Scanner(System.in);
+    Scanner ship = new Scanner(System.in); // variable declarations for board, as well as the basics of the game
     int numRows = 10;
     int numCols = 10;
     int[] ships = new  int[5];
 
-    int[][] game = new int[numRows][numCols];
+    int[][] game = new int[numRows][numCols]; 
      int xPos;
      int yPos;
      int direction;
@@ -27,7 +28,7 @@ import java.util.Scanner;
     public void shipPlace()
     {
 
-        int numRows = 10;
+        /*int numRows = 10;
         int numCols = 10;
         int[] ships = new  int[5];
 
@@ -42,7 +43,7 @@ import java.util.Scanner;
         final int carrier = 5;
         final int cruiser = 3;
         final int submarine = 3;
-        final int battleship = 4;
+        final int battleship = 4;*/ //accidental repeat
         System.out.println("The board is a 10 x 10 square"); // "board" game instructions on how to play
         System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
         System.out.println("The ships:");
@@ -83,7 +84,7 @@ import java.util.Scanner;
             if(direction == 1)
             {
                 if(xPos + destroyer >= numRows)// to see if the row number they put is in the grid itself
-                if(yPos + destroyer >= numColumns)// same as rows, but for columns, and for yPos
+                if(yPos + destroyer >= numCols)// same as rows, but for columns, and for yPos
                 {
                     System.out.println("\n Sorry, but that is not on the board \n");
                     setDirection(shipName);

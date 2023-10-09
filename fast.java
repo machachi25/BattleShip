@@ -22,7 +22,7 @@ public class fast
 {
     System.out.println("The board is an 8x8");
     System.out.println("1 is north, 2 is west, 3 is south, 4 is east");
-    System.out.println("Ships: Destroyer(2), Cruiser(3), Submarine(3)");
+    System.out.println("Ships: Destroyer(2), Cruiser(3), Submarine(3)"); // want to add a varibale that uses a random int value, and that int will place the ship anywhere on the 2d array
    
 }
 }
