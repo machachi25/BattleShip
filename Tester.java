@@ -4,6 +4,6 @@ public class Tester {
         Battleship b1 = new Battleship(); // want to add all my class into the tester
         b1.printBoard();
         b1.shipPlace();
-        b1.setDirection();
+        //b1.setDirection();
     }
 }

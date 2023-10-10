@@ -5,7 +5,7 @@ public class Welcome {
         Scanner mode = new Scanner(System.in);
         System.out.println("Hello There! Welcome to battleship!");
         System.out.println("Would you rather play the fast mode or the Regular mode?");
-        String Mode; //want to add conditional that says if user says "Fast" or "fast", then send a call to the fast class but Im't not sure how to do that
+        String str; //want to add conditional that says if user says "Fast" or "fast", then send a call to the fast class but Im't not sure how to do that
         
     }
 }
