@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Random; // this is for fast mode, but going to try and get regualr working first
+//import java.util.Random; // this is for fast mode, but going to try and get regualr working first
  
  public class Battleship
 {
@@ -113,6 +113,10 @@ import java.util.Random; // this is for fast mode, but going to try and get regu
             }
         System.out.println("");
     }
+    }
+    public void welcome()
+    {
+        
     }
     }            
 

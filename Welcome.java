@@ -1,6 +1,6 @@
 import java.util.Scanner; // whole point of this "Welcome" class is to act as a conditional that calls to the other classes
 public class Welcome {
-    public static String welcome()
+    public String welcome()
     {
         Scanner mode = new Scanner(System.in);
         String str; //want to add conditional that says if user says "Fast" or "fast", then send a call to the fast class but I'm not sure how to do that
