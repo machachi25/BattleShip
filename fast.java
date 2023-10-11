@@ -25,7 +25,7 @@ public class Fast
 
     public void welcome()
     {
-        
+        System.out.println("Test");
     }
 }
 
