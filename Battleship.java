@@ -61,10 +61,18 @@ import java.util.Scanner;
             type = ship.nextLine();
         }
         while(!type.equalsIgnoreCase("destroyer") || !type.equalsIgnoreCase("Cruiser") || !type.equalsIgnoreCase("carrier") || !type.equalsIgnoreCase("Battleship") || !type.equalsIgnoreCase("Submarine"));
-        System.out.println("What row would you like your " + type +  " to go in? "); // user inputs the x coordinate of their ship
-        xPos = ship.nextInt();
-        System.out.println("What column would you like to place your " + type + "?"); //user inputs the y coordinate of their ship
-        yPos = ship.nextInt();
+        do
+        {
+            System.out.println("What row would you like your " + type +  " to go in? "); // user inputs the x coordinate of their ship
+            xPos = ship.nextInt();
+        }
+        while(xPos >= 1 || xPos <= 10);
+        do
+        {
+            System.out.println("What column would you like to place your " + type + "?"); //user inputs the y coordinate of their ship
+            yPos = ship.nextInt();
+        }
+        while(yPos >= 1 || yPos <= 10);
 
         /*do
          * {
