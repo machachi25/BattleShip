@@ -5,11 +5,19 @@ public class Tester {
         Battleship b1 = new Battleship(); // want to add all my class into the tester; instance of battleship class
         Welcome w1 = new Welcome();//instance of the welcome class
         String Str;
-        Str = w1.welcome();
+        //Str = w1.welcome();
         f1.welcome(); 
         b1.welcome();
         b1.printBoard();
         b1.shipPlace();
+        if(w1.welcome())
+        {
+            //direct to the fast class
+        }
+        else
+        {
+            //direct to battleship class
+        }
         //b1.setDirection();
     }
 }
