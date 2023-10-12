@@ -60,7 +60,7 @@ import java.util.Scanner;
             System.out.println("What ship would you like to place?");
             type = ship.nextLine();
         }
-        while(type.equalsIgnoreCase("destroyer") || type.equalsIgnoreCase("Cruiser") || type.equalsIgnoreCase("carrier") || type.equalsIgnoreCase("Battleship") || type.equalsIgnoreCase("Submarine"));
+        while(!((type.equalsIgnoreCase("destroyer")) || (type.equalsIgnoreCase("Cruiser")) || (type.equalsIgnoreCase("carrier")) || (type.equalsIgnoreCase("Battleship")) || (type.equalsIgnoreCase("Submarine"))));
         do
         {
             System.out.println("What row would you like your " + type +  " to go in? "); // user inputs the x coordinate of their ship
