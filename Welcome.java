@@ -6,8 +6,12 @@ public class Welcome {
         boolean Mode;
         String Str; //want to add conditional that says if user says "Fast" or "fast", then send a call to the fast class but I'm not sure how to do that
         System.out.println("Hello There! Welcome to battleship!");
+        do
+        {
         System.out.println("Would you rather play the fast mode or the Regular mode?");
         Str = mode.nextLine();
+        }
+        while(!Str.equalsIgnoreCase("fast") || !Str.equalsIgnoreCase("Regular"));
         mode.close();
         if(Str.equalsIgnoreCase("fast"))
         {
