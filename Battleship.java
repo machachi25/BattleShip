@@ -3,7 +3,11 @@ import java.util.Scanner;
  
  public class Battleship
 {
-
+    public void welcome()
+    {
+        
+    }
+   
     Scanner ship = new Scanner(System.in); // variable declarations for board, as well as the basics of the game
     int numRows = 10;
     int numCols = 10;
@@ -122,10 +126,7 @@ import java.util.Scanner;
         System.out.println("");
     }
     }
-    public void welcome()
-    {
-        
-    }
+    
     
 }           
 
