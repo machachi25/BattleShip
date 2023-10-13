@@ -27,6 +27,18 @@ public class Fast
     {
         //System.out.println("Test");
     }
-}
 
+    public void gameBoard()
+    {
+        for(int row = 0; row < 8; row++ )
+        {
+            for(int column = 0; column < 8; column++)
+            {
+                System.out.println(speed[row][column] + " ");
+            }
+            System.out.println(" ");
+        }
+    }
+}
+ 
 

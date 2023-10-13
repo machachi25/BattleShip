@@ -20,7 +20,7 @@ import java.util.Scanner;
      final int submarine = 3;
      final int battleship = 4;
     public static void main()
-    {
+    { 
 
 
 
@@ -29,7 +29,7 @@ import java.util.Scanner;
     {
 
 
-        /*int numRows = 10;
+        int numRows = 10;
         int numCols = 10;
         int[] ships = new  int[5];
 
@@ -44,7 +44,7 @@ import java.util.Scanner;
         final int carrier = 5;
         final int cruiser = 3;
         final int submarine = 3;
-        final int battleship = 4;*/ //accidental repeat
+        final int battleship = 4; //accidental repeat
         System.out.println("The board is a 10 x 10 square"); // "board" game instructions on how to play
         System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
         System.out.println("The ships:");
@@ -83,7 +83,7 @@ import java.util.Scanner;
          */
         //Was gonna repeat this do while loop for all of the ship names, hoping that when they type their ship name, it will only register for 10 "correct" names;
         //
-
+            ship.close();
     }
      public void setDirection(String shipName) // this class is meant to be a validator to see if their ship placement is valid
       {
@@ -126,7 +126,8 @@ import java.util.Scanner;
     {
         
     }
-    }            
+    
+}           
 
 //Things that i have made progress on: i have a very clear set of directions that are made up of print statements, 
 //my main problem is how to write out my plan in the java language, hence my do while problem

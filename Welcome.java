@@ -17,7 +17,7 @@ public class Welcome {
        else // make user have to sya fast  or regular(ask twyford)
        {
             Mode = false;
-            return Mode;
+            return Mode; 
        }
     }
 }
