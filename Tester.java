@@ -4,7 +4,7 @@ public class Tester {
         Welcome w1 = new Welcome();//instance of the welcome class
         Fast f1 = new Fast();//instance of the fast class
         Battleship b1 = new Battleship(); // want to add all my class into the tester; instance of battleship class
-        String Str;
+        String str = "";
         //Str = w1.welcome();
        if(w1.welcome())
         {

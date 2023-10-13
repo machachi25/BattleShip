@@ -1,27 +1,27 @@
 import java.util.Scanner; // whole point of this "Welcome" class is to act as a conditional that calls to the other classes
 public class Welcome {
+
     public boolean welcome()
     {
         Scanner mode = new Scanner(System.in);
-        boolean Mode;
-        String Str; //want to add conditional that says if user says "Fast" or "fast", then send a call to the fast class but I'm not sure how to do that
+        boolean choice;
+        String str; //want to add conditional that says if user says "Fast" or "fast", then send a call to the fast class but I'm not sure how to do that
         System.out.println("Hello There! Welcome to battleship!");
         do
         {
         System.out.println("Would you rather play the fast mode or the Regular mode?");
-        Str = mode.nextLine();
+        str = mode.nextLine().toLowerCase();
         }
-        while(!Str.equalsIgnoreCase("fast") || !Str.equalsIgnoreCase("Regular"));
+        while( (!str.equals("fast")) && (!str.equals("regular")) );
         mode.close();
-        if(Str.equalsIgnoreCase("fast"))
+        if(str.equals("fast")) 
         {
-            Mode = true;
-            return Mode;
+            choice = true;
         }
        else // make user have to sya fast  or regular(ask twyford)
        {
-            Mode = false;
-            return Mode; 
+            choice = false;
        }
+            return choice; 
     }
 }
