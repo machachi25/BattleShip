@@ -32,7 +32,7 @@ import java.util.Scanner;
     {
 
         //Scanner ship = new Scanner(System.in);
-        /*int numRows = 10;
+        int numRows = 10;
         int numCols = 10;
         int[] ships = new  int[5];
 
@@ -48,7 +48,7 @@ import java.util.Scanner;
         final int submarine = 3;
         final int battleship = 4; //accidental repeat
         System.out.println("The board is a 10 x 10 square"); // "board" game instructions on how to play
-        System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
+        //System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
         System.out.println("The ships:");
         System.out.println("Destroyer - 2 units long");
         System.out.println("Cruiser - 3 units long");
@@ -57,12 +57,12 @@ import java.util.Scanner;
         System.out.println("Carrier - 5 units long"); 
         System.out.println("The board is a 10 x 10 square");
         System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
-        //do*/
-        //{
+        do
+        {
             System.out.println("What ship would you like to place?");
             type = ship.nextLine().toLowerCase();
-        //}
-        /*while(!((type.equals("destroyer")) || (type.equals("cruiser")) || (type.equals("carrier")) || (type.equals("battleship")) || (type.equals("submarine"))));
+        }
+        while(!((type.equals("destroyer")) || (type.equals("cruiser")) || (type.equals("carrier")) || (type.equals("battleship")) || (type.equals("submarine"))));
         do
         {
             System.out.println("What row would you like your " + type +  " to go in? "); // user inputs the x coordinate of their ship
@@ -90,7 +90,7 @@ import java.util.Scanner;
     }
      public void setDirection(String shipName) // this class is meant to be a validator to see if their ship placement is valid
       {
-        int direction;        
+        int direction = ;        
             do
             {
                 System.out.println("What direction would you like your" + shipName +  "to go in? ");
@@ -124,6 +124,36 @@ import java.util.Scanner;
             }
         System.out.println("");
     }
+    }
+
+    boolean validator(game, xPos, yPos, direction, length)
+    {
+        if(direction == 0 && xPos + length > 10)
+        {
+            return false;
+        }
+        else if(direction == 1 && yPos + length > 10)
+        {
+            return false; 
+        }
+        for(int i = 0; i < length; i++)
+        {
+            if(direction == 0 && game[x + 1][y] == 2)
+            {
+                return false;
+            }
+            else if (direction == 1 && game[x][y + i] == 2)
+            {
+                return false;
+            }
+        }
+        return true;
+
+        if validator (game, xPos, yPos, direction, length)
+        {
+            game = placeShip();
+            System.out.println(game);
+        }
     }
     
     
