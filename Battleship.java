@@ -23,7 +23,6 @@ import java.util.Scanner;
      final int cruiser = 3;
      final int submarine = 3;
      final int battleship = 4;
-    public static void main()
     { 
 
 
@@ -32,18 +31,17 @@ import java.util.Scanner;
     public void shipPlace()
     {
 
-
-        int numRows = 10;
+        //Scanner ship = new Scanner(System.in);
+        /*int numRows = 10;
         int numCols = 10;
         int[] ships = new  int[5];
 
         //System.out.println("The board is a 10 x 10 square");
         int[][] game = new int[numRows][numCols];
-        Scanner ship = new Scanner(System.in);
         int xPos;
         int yPos;
         int direction;
-        String type;
+        String type = "";
         final int destroyer = 2; //ship variables and declarations
         final int carrier = 5;
         final int cruiser = 3;
@@ -59,12 +57,12 @@ import java.util.Scanner;
         System.out.println("Carrier - 5 units long"); 
         System.out.println("The board is a 10 x 10 square");
         System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
-        do
-        {
+        //do*/
+        //{
             System.out.println("What ship would you like to place?");
             type = ship.nextLine().toLowerCase();
-        }
-        while(!((type.equals("destroyer")) || (type.equals("cruiser")) || (type.equals("carrier")) || (type.equals("battleship")) || (type.equals("submarine"))));
+        //}
+        /*while(!((type.equals("destroyer")) || (type.equals("cruiser")) || (type.equals("carrier")) || (type.equals("battleship")) || (type.equals("submarine"))));
         do
         {
             System.out.println("What row would you like your " + type +  " to go in? "); // user inputs the x coordinate of their ship
@@ -87,6 +85,7 @@ import java.util.Scanner;
          */
         //Was gonna repeat this do while loop for all of the ship names, hoping that when they type their ship name, it will only register for 10 "correct" names;
         //
+        
             ship.close();
     }
      public void setDirection(String shipName) // this class is meant to be a validator to see if their ship placement is valid

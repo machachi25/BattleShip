@@ -7,7 +7,7 @@ public class Tester {
         String str = "";
         //Str = w1.welcome();
        if(w1.welcome())
-        {
+        { 
             f1.welcome();  //direct to the fast class
         }
         else
