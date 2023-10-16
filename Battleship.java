@@ -2,7 +2,7 @@ import java.util.Scanner;
 //import java.util.Random; // this is for fast mode, but going to try and get regualr working first
  
  public class Battleship
-{
+ {
     public void welcome()
     
     {
@@ -15,15 +15,15 @@ import java.util.Scanner;
     int[] ships = new  int[5];
 
     int[][] game = new int[numRows][numCols]; 
-     int xPos;
-     int yPos;
-     int direction;
-     String type;
-     final int destroyer = 2;
-     final int carrier = 5;
-     final int cruiser = 3;
-     final int submarine = 3;
-     final int battleship = 4;
+    int xPos;
+    int yPos;
+    int direction;
+    String type;
+    final int destroyer = 2;
+    final int carrier = 5;
+    final int cruiser = 3;
+    final int submarine = 3;
+    final int battleship = 4;
     
 
     public void shipPlace()
@@ -88,7 +88,8 @@ import java.util.Scanner;
     }
      
 
-    boolean validator(game, xPos yPos, direction, length)//validator to check if the ship is not being placed of the board, or on top of another ship
+    
+    boolean validator(game, xPos, yPos, direction, length)//validator to check if the ship is not being placed of the board, or on top of another ship
     {
         int direction;
         System.out.println("Enter 1 for vertical ship placement, or 0 for horizontal ship placement");
@@ -140,7 +141,7 @@ import java.util.Scanner;
     }
     }
          
-
+ }
 /*public void setDirection(String shipName) // this class is meant to be a validator to see if their ship placement is valid
       {
         int direction = ;        
