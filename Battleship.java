@@ -4,13 +4,7 @@ import java.util.Scanner;
  
  public class Battleship
  {
-    public void welcome()
-    
-    {
-        
-    }
-   
-    Scanner ship = new Scanner(System.in); // variable declarations for board, as well as the basics of the game
+ Scanner ship = new Scanner(System.in); // variable declarations for board, as well as the basics of the game
     int numRows = 10;
     int numCols = 10;
     int[] ships = new  int[5];
@@ -20,18 +14,27 @@ import java.util.Scanner;
     int yPos;
     int direction;
     String type;
-    final int destroyer = 2;
-    final int carrier = 5;
-    final int cruiser = 3;
-    final int submarine = 3;
-    final int battleship = 4;
+    String cheese;
+    int destroyer = 2;
+    int carrier = 5;
+    int cruiser = 3;
+    int submarine = 3;
+    int battleship = 4;
+
+    public void welcome()
+    
+    {
+        
+    }
+   
+   
     
 
     public void shipPlace()
     {
 
         //Scanner ship = new Scanner(System.in);
-        int numRows = 10;
+        /*int numRows = 10;
         int numCols = 10;
         int[] ships = new  int[5];
 
@@ -45,7 +48,7 @@ import java.util.Scanner;
         final int carrier = 5;
         final int cruiser = 3;
         final int submarine = 3;
-        final int battleship = 4; //accidental repeat
+        final int battleship = 4; */ //accidental repeat
         System.out.println("The board is a 10 x 10 square"); // "board" game instructions on how to play
         //System.out.println(" 1 is north, 2 is west, 3 is south, 4 is east");
         System.out.println("The ships:");
@@ -77,6 +80,11 @@ import java.util.Scanner;
         }
         while(yPos <= 1 || yPos >= 10);
 
+        do
+        {
+            System.out.println("Enter the integer for if you want the ship to be horizontal(0) or vertical(1)");
+
+        }
         /*do
          * {
          *  System.out.println("Enter the ship you want to place: ");
@@ -94,7 +102,7 @@ import java.util.Scanner;
     
     public boolean validator(int[][] game, int xPos, int yPos,  int direction, int length)//validator to check if the ship is not being placed of the board, or on top of another ship
     {
-        String cheese;
+        
         System.out.println("Enter 1 for vertical ship placement, or 0 for horizontal ship placement");
         do
         {
@@ -124,6 +132,10 @@ import java.util.Scanner;
                 }
             }
             return true;
+            if (validator(game, xPos, yPos, direction, length) == true)
+            {
+                System.out.print("1");
+            }
         }
         while((validator(game, xPos, yPos, direction, length) == false));
     }  
