@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 //import java.util.Random; // this is for fast mode, but going to try and get regualr working first
  
  public class Battleship
@@ -58,7 +59,9 @@ import java.util.Scanner;
         do
         {
             System.out.println("What ship would you like to place?");
-            type = ship.nextLine().toLowerCase();
+            type = ship.nextLine();
+            type = type.toLowerCase();
+            //System.out.println("TEST");
         }
         while(!((type.equals("destroyer")) || (type.equals("cruiser")) || (type.equals("carrier")) || (type.equals("battleship")) || (type.equals("submarine"))));
         do
@@ -89,43 +92,40 @@ import java.util.Scanner;
      
 
     
-    boolean validator(game, xPos, yPos, direction, length)//validator to check if the ship is not being placed of the board, or on top of another ship
+    public boolean validator(int[][] game, int xPos, int yPos,  int direction, int length)//validator to check if the ship is not being placed of the board, or on top of another ship
     {
-        int direction;
+        String cheese;
         System.out.println("Enter 1 for vertical ship placement, or 0 for horizontal ship placement");
         do
         {
-            System.out.println("Enter the direction you want your ship to place");
-            cheese = ship.nextInt();
-        }
-        while(!(cheese.equals("0") || (cheese.equals(1))));
-        if(direction == 0 && xPos + length > 10)
-        {
-            return false;
-        }
-        else if(direction == 1 && yPos + length > 10)
-        {
-            return false; 
-        }
-        for(int i = 0; i < length; i++)
-        {
-            if(direction == 0 && game[x + 1][y] == 2)
+            do
+            {
+                System.out.println("Enter the direction you want your ship to place");
+                cheese = ship.nextLine();
+            }
+            while(!(cheese.equals("0") || (cheese.equals("1"))));
+            if(direction == 0 && xPos + length > 10)
             {
                 return false;
             }
-            else if (direction == 1 && game[x][y + i] == 2)
+            else if(direction == 1 && yPos + length > 10)
             {
-                return false;
+                return false; 
             }
+            for(int i = 0; i < length; i++)
+            {
+                if(direction == 0 && game[xPos + 1][yPos] == 2)
+                {
+                    return false;
+                }
+                else if (direction == 1 && game[xPos][yPos + i] == 2)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
-        return true;
-
-        if validator(game, xPos, yPos, direction, length)
-        {
-            game = shipPlace();
-            System.out.println(game);
-        }
-
+        while((validator(game, xPos, yPos, direction, length) == false));
     }  
          
     public void printBoard() // class is to print out a board, i think we did this in class

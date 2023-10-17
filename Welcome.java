@@ -13,7 +13,7 @@ public class Welcome {
         str = mode.nextLine().toLowerCase();
         }
         while( (!str.equals("fast")) && (!str.equals("regular")) );
-        mode.close();
+        //mode.close();
         if(str.equals("fast")) 
         {
             choice = true;
