@@ -149,8 +149,7 @@ import java.util.Scanner;
         System.out.println("");
     }
     }
-         
- }
+}
 /**public void setDirection(String shipName) // this class is meant to be a validator to see if their ship placement is valid
       {
         int direction = ;        

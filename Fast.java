@@ -2,6 +2,10 @@ import java.util.Scanner;//fast class is the class for the fast mode
 //import java.util.Random; //random ints for the place of the ships
 public class Fast
  {
+     public void welcome()
+    {
+        //System.out.println("Test");
+    }
     Scanner battle = new Scanner(System.in);
     double order = (Math.random() * 100);
     int rows = 8; //similar to regular, board wise
@@ -36,21 +40,16 @@ public class Fast
         }
     }
 
-    public void welcome()
-    {
-        //System.out.println("Test");
-    }
-
     public void gameBoard()
     {
-        for(int row = 0; row < 8; row++ )
+    for(int hor = 0; hor < 8; hor++ )
+    {
+        for(int ver = 0; ver < 8; ver++ )
         {
-            for(int column = 0; column < 8; column++)
-            {
-                System.out.println(speed[row][column] + " ");
-            }
-            System.out.println(" ");
+            System.out.println(speed[hor][ver] + " ");
         }
+        System.out.println("");
+    }
     }
 }
  
