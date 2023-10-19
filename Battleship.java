@@ -7,7 +7,7 @@ import java.util.Scanner;
  Scanner ship = new Scanner(System.in); // variable declarations for board, as well as the basics of the game
     int numRows = 10;
     int numCols = 10;
-    int[] ships = new  int[5];
+    int[] ships = new int[5];
 
     int[][] game = new int[numRows][numCols]; 
     int xPos;

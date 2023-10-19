@@ -17,7 +17,7 @@ public class Tester {
        if(w1.welcome())
         { 
             f1.welcome();  //direct to the fast class
-            //f1.placeShip();
+            f1.placeShip();
             f1.gameBoard();
         }
         else
