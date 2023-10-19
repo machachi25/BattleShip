@@ -83,8 +83,10 @@ import java.util.Scanner;
         do
         {
             System.out.println("Enter the integer for if you want the ship to be horizontal(0) or vertical(1)");
+            direction = ship.nextInt();
 
         }
+        while(!((direction == 1) && (direction == 0)));
         /*do
          * {
          *  System.out.println("Enter the ship you want to place: ");
@@ -122,22 +124,23 @@ import java.util.Scanner;
             }
             for(int i = 0; i < length; i++)
             {
-                if(direction == 0 && game[xPos + 1][yPos] == 2)
+                if(direction == 0 && game[xPos + 1][yPos] == 1)
                 {
                     return false;
                 }
-                else if (direction == 1 && game[xPos][yPos + i] == 2)
+                else if (direction == 1 && game[xPos][yPos + i] == 1)
                 {
                     return false;
                 }
             }
             return true;
-            if (validator(game, xPos, yPos, direction, length) == true)
+
+            /*if (validator(game, xPos, yPos, direction, length) == true)
             {
                 System.out.print("1");
-            }
+            }*/
         }
-        while((validator(game, xPos, yPos, direction, length) == false));
+        while(!((direction) == 1 && (direction == 0)));
     }  
          
     public void printBoard() // class is to print out a board, i think we did this in class
@@ -154,7 +157,7 @@ import java.util.Scanner;
     }
          
  }
-/*public void setDirection(String shipName) // this class is meant to be a validator to see if their ship placement is valid
+/**public void setDirection(String shipName) // this class is meant to be a validator to see if their ship placement is valid
       {
         int direction = ;        
             do
