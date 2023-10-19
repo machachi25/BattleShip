@@ -1,9 +1,16 @@
+/**
+ * @author Chinmay Machavaram
+ * @since 10/19/23
+ * @version 1.0.0
+ * This class is the fast mode of the game
+ */
 import java.util.Scanner;//fast class is the class for the fast mode
 //import java.util.Random; //random ints for the place of the ships
+
 public class Fast
  {
      public void welcome()
-    {
+    { 
         //System.out.println("Test");
     }
     Scanner battle = new Scanner(System.in);

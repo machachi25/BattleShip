@@ -1,4 +1,11 @@
+ /**
+ * @author Chinmay Machavaram
+ * @since 10/19/23
+ * @version 1.0.0
+ * This class is the main method class
+ */
 public class Tester {
+   
     
     public static void main(String[] args)
     {
@@ -7,7 +14,7 @@ public class Tester {
         int[][] game = new int[numRows][numCols];
         int xPos = 0;
         int yPos = 0;
-        int direction = 0;;       
+        int direction = 0; 
         int length = 0;
         Welcome w1 = new Welcome();//instance of the welcome class
         Fast f1 = new Fast();//instance of the fast class

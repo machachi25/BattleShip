@@ -1,3 +1,9 @@
+/**
+ * @author Chinmay Machavaram
+ * @since 10/19/23
+ * @version 1.0.0
+ * This class is the first class that compiles to lead to fast/reg
+ */
 import java.util.Scanner; // whole point of this "Welcome" class is to act as a conditional that calls to the other classes
 public class Welcome {
 

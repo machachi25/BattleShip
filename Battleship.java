@@ -1,3 +1,9 @@
+/**
+ * @author Chinmay Machavaram
+ * @since 10/19/23
+ * @version 1.0.0
+ * This class is the regular mode of the game
+ */
 import java.util.Scanner;
 
 //import java.util.Random; // this is for fast mode, but going to try and get regualr working first
@@ -5,7 +11,7 @@ import java.util.Scanner;
  public class Battleship
  {
  Scanner ship = new Scanner(System.in); // variable declarations for board, as well as the basics of the game
-    int numRows = 10;
+    int numRows = 10; 
     int numCols = 10;
     int[] ships = new int[5];
 
